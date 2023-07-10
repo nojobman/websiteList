@@ -1,0 +1,48 @@
+@use 'keyboard';
+
+* {
+    
+}
+#container {
+    max-width: 1020px;
+    margin:0 auto;
+    padding:0 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1,
+h3 {
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+h1 {
+    padding: 10px 0;
+}
+h1::after {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    content: '';
+    width: 25%;
+    border-bottom: 5px solid #6a6a6a;
+    transform: translate(-50%);
+}
+
+textarea {
+    width: 50%;
+    height: 60px;
+    border-radius: 3px;
+    border-color: gray;
+}
+@media screen and (max-width: 767px) {
+    textarea {
+        width:90%;
+    }
+    h1::after {
+        width:50%;
+    }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mypage</title>
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- ローディング画面 -->
+    <div id="splash">
+        <div id="splash-logo">
+            <img src="img/namelog.png">
+        </div>
+    </div>
+    <div class="splashbg"></div>
+
+    <!-- ローディングのために全て囲む -->
+    <div id="container">
+
+        <header id="header" class="wrapper">
+            <h1 class="site-title">
+                <a href="index.html"><img src="img/logo2.svg" alt="WEBの新川"></a>
+            </h1>
+            <!-- pc-navi -->
+            <nav id="pc-navi">
+                <ul class="pc-menu">
+                    <li><a href="#example">WORK</a></li>
+                    <li><a href="#question">Q&A</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+        <!-- hamburger -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- sp-navi -->
+        <nav id="sp-navi">
+            <ul>
+                <li><a href="#example">WORK</a></li>
+                <li><a href="#question">Q&A</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <section id="mainvisual" class="wrapper">
+            <div class="text">
+                <p class="title">安く、素早く、お手軽に</p>
+                <p class="content">「自分だけのウェブサイト欲しいけど、業者に依頼すると費用が高すぎる」とお悩みのお方。Nikawaはお財布に優しいお手頃価格であなただけのウェブサイトを制作します。</p>
+            </div>
+            <div class="main-image">
+                <img src="img/mainvisual2.png" alt="main-image">
+            </div>
+        </section>
+
+        <section id="example">
+            <div class="wrapper">
+            <h2 class="section-title">制作例</h2>
+            <ul>
+                
+                <li class="item fadeUpTrigger">
+                    <a href="./meditation_app/index.html" target="_blank"><span class="mask"><img src="img/music.png" alt="music"></span></a>
+                </li>
+                <li class="item fadeUpTrigger">
+                    <a href="./responsive/index.html" target="_blank"><span class="mask"><img src="img/sass.png" alt="sass"></span></a>
+                </li>
+                <li class="item fadeUpTrigger">
+                    <span class="mask"><img src="img/p6.png"></span>
+                </li>
+                <li class="item fadeUpTrigger">
+                    <span class="mask"><img src="img/portfolio2.png"></span>
+                </li>
+                <li class="item fadeUpTrigger">
+                    <span class="mask"><img src="img/portfolio3.png"></span>
+                </li>
+                <li class="item fadeUpTrigger">
+                    <span class="mask"><img src="img/portfolio5.png"></span>
+                </li>
+            </ul>
+            </div>
+        </section>
+
+        <section id="question" class="fadeUpTrigger">
+        <h2 class="section-title">Q&A</h2>
+        <!-- アコーディング -->
+        <ul class="accordion-area">
+            <!-- 1つ -->
+            <li>
+                <div class="qa-area">
+                    <h3 class="qa-title">費用はどのくらいかかるでしょうか？</h3>
+                    <div class="qa-box">
+                        <p>当サイトのような1ページで収まるサイトであれば、最安値5,000円から承ります。ご予算にあわせて最適なプランを提案させて頂きますので、ぜひお問い合わせください。</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="qa-area">
+                    <h3 class="qa-title">WordPressサイトも依頼できますか？</h3>
+                    <div class="qa-box">
+                        <p>はい、承っております。オリジナルテーマの作成から、SEO対策まで対応可能です。インストール方法が分からない方、サイトの設計が定まっていない方もぜひご相談ください。</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="qa-area">
+                    <h3 class="qa-title">依頼後の流れを教えてください</h3>
+                    <div class="qa-box">
+                        <p>お客様からのご要望に応じ、メールやチャット、ビデオ通話等を用いて理想のサイトデザインをヒヤリングさせて頂きます。その後、私の方でモックアップ(サイトの完成形を図にして表したもの)を依頼主様にお渡しして確認してもらいます。問題なければ制作に移ります。</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="qa-area">
+                    <h3 class="qa-title">お届け日数</h3>
+                    <div class="qa-box">
+                        <p>制作するホームページの内容によりますので、ヒヤリングの際にお伝えさせて頂きます。おおよそ1週間を目途に考えてもらえればと思います。</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+
+        <!-- contact -->
+        <section id="contact" class="wrapper">
+            <div class="contact-area">
+                <h2 class="section-title">お問い合わせ</h2>
+                <!-- 説明 -->
+                <div class="contact-explain">
+                    <p>お気軽にご連絡ください</p>
+                </div>
+                <!-- ボタン -->
+                <div class="contact-btn-area">
+                    <ul>
+                        <li class="contact-btn-list"><a href="./keyboard/index.html" class="contact-btn" target="_blank">チャットでのお問い合わせ</a></li>
+                        <!-- <li class="contact-btn-list"><a href="" class="contact-btn">電話でのお問い合わせ</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- sns場所 -->
+        <div id="sns">
+            <ul class="sns-list">
+                <li>
+                    <a href="" target="_blank">
+                    <img src="img/twitter.png">
+                    
+                    </a>
+                </li>
+                <li>
+                    <a href="" target="_blank">
+                    <img src="img/line.png">
+                    
+                    </a>
+                </li>
+                <li>
+                    <a href="" target="_blank">
+                    <img src="img/facebook.png">
+                    
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- 上へ -->
+        <p id="page-top"><a href="#">Page Top</a></p>
+        
+        <footer id="footer" class="wrapper">
+
+            <p class="copyright">&copy;Nikawa</p>
+        </footer>
+    </div>
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.
+cookie.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

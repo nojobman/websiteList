@@ -1,0 +1,82 @@
+@use 'colors';
+@use 'media-queries';
+
+// extendで使うが、mixinの方が良さげ
+%align-center {
+    display: flex;
+    align-items: center;
+ }
+
+.navbar {
+    background: colors.$light;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem calc((100vw - 1200px) / 2);
+    z-index: 10;
+    position: relative;
+
+    // &は親要素指定、名前だけかな？
+    &__logo {
+        color: colors.$dark;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2rem;
+        margin-left: 24px;
+        @extend %align-center;
+    }
+
+    &__bars {
+        opacity: 0;
+
+        // includeがいるか不明
+        @include media-queries.tablet {
+            color: colors.$dark;
+            opacity: 1;
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            font-size: 2rem;
+        }
+    }
+
+    &__menu {
+        @extend %align-center;
+        list-style: none;
+        text-align: center;
+        margin-right: 24px;
+
+        @include media-queries.tablet {
+            display: none;
+        }
+
+        &--links {
+            color: colors.$dark;
+            @extend %align-center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 0 1rem;
+
+            &:hover {
+                color: colors.$lime;
+                transition: all 0.3s ease;
+            }
+        }
+
+        #button {
+            padding: 12px 24px;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            background: colors.$lime;
+            margin-left: 16px;
+            color: colors.$light;
+
+            &:hover {
+                background: colors.$orangeRed;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+

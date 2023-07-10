@@ -1,0 +1,200 @@
+
+
+.app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.vid-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+}
+.time-select {
+    order: 3;
+    
+    height: 33%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+}
+.time-select button {
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    background: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    color: #ddd;
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+.time-select button:hover {
+    color: #000;
+    background: #fff;
+    align-self: center;
+}
+
+
+.player-container {
+    order: 2;
+    
+    height: 33%;
+    position: relative;
+    
+}
+.player-container svg {
+    position: absolute;
+    top: 20%;
+    height: 90%;
+    left: 50%;
+    /* lotateははじまり、角度 */
+    transform: translate(-50%, 0) rotate(-90deg);
+}
+.player-container svg circle {
+    transition: all 0.2s ease-in-out;
+}
+.player-container img {
+    position: absolute;
+    height:40%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    /*  */
+    z-index: 10;
+}
+/* 表示時間 */
+.player-container .time-display {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 30px;
+    color: #fff;
+    margin-top: -5px;
+}
+.sound-picker {
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    height: 33%;
+}
+
+img,
+video,
+svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.sound-picker button {
+    border: none;
+    height: 120px;
+    width: 120px;
+    padding: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/*ボタンの背景色を赤色*/
+
+.sound-picker button:nth-child(1) {
+    background: #4972a1;
+}
+/*ボタンの背景色を青色*/
+
+.sound-picker button:nth-child(2) {
+    background: #a14f49;
+}
+
+
+/* pc 重要 */
+@media screen and (min-width: 500px){
+    .app {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    video {
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        top: 50%;
+        left: 0;
+        right: 0;
+        object-fit: cover;
+        transform: translateY(-50%);
+        z-index: -10;
+    }
+
+    .time-select {
+        order: 1;
+        height: 80%;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+
+    .time-select button:nth-child(1) {
+        align-self: inherit;
+    }
+
+    .time-select button:nth-child(2) {
+        align-self: inherit;
+    }
+
+    .time-select button:nth-child(3) {
+        align-self: inherit;
+    }
+
+    .player-container {
+        order: 2;
+        height: 80%;
+        flex: 1;
+    }
+
+    .player-container svg {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 50%;
+        max-height: 250px;
+        width: 80%;
+    }
+
+    .player-container img {
+        top: 50%;
+        height: 20%;
+        transform: translate(-55%, -50%);
+    }
+
+
+
+    .player-container .time-display {
+        top: calc(100%/7);
+        font-size: 30px;
+    }
+    .sound-picker {
+        order: 3;
+        height: 80%;
+        flex: 1;
+        flex-direction: column;
+    }
+}
